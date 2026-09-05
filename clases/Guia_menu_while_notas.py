@@ -11,8 +11,20 @@ while True:
     op = int(input("Ingrese una opcion :"))
 
     if op == 1:
+        cantidad_notas = 0
+        suma_notas = 0
+        
 
-        cantidad_notas = int(input("Ingresa la cantidad de notas :"))
+        while True:
+            try:
+                cantidad_notas = int(input("Ingresa la cantidad de notas :"))
+                if cantidad_notas > 0:
+
+                    break
+                else:
+                    print("La nota debe ser mayor a 0")
+            except:
+                print("Error,ingresa un numero")
 
         for i in range(cantidad_notas):
             nota = float(input(f"Ingresa la nota {i + 1} a registrar :"))
