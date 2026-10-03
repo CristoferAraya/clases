@@ -50,8 +50,8 @@ while True:
 
             recaudacion = recaudacion + precio
 
-            asientos_libres = asientos_libres - cantidad_entradas
-            entradas_vendidas = entradas_vendidas + cantidad_entradas
+        asientos_libres = asientos_libres - cantidad_entradas
+        entradas_vendidas = entradas_vendidas + cantidad_entradas
 
     
           
