@@ -12,7 +12,7 @@ while True:
     if op ==1:
         tarea_eleccion= input("Ingrese nombre de la tarea : ")
         
-        if tareas == "":
+        if tarea_eleccion == "":
             print("La tarea no puede estar vacía.")
         else:
             tareas.append(tarea_eleccion)
@@ -34,19 +34,20 @@ while True:
                 print("Ese numero no existe")
             else:
                 nuevo = input("Nueva tarea :")
-                tarea_eleccion[numero -1] = nuevo
+                tareas[numero - 1] = nuevo
     elif op == 4:
-        if len(tarea_eleccion) == 0:
+        if len(tareas) == 0:
             print("No hay tareas para eliminar.")
         else:
             numero = int(input("Número de la tarea: "))
-        if numero <1 or numero >len(tarea_eleccion):
+        if numero <1 or numero >len(tareas):
             print("Ese numero no existe")
         else:
-            tarea_eleccion.pop(numero -1)
-        
+            tareas.pop(numero - 1)
+
     elif op == 5:
-        print()
+        print("Saliendo del programa...")
+        break
     else:
-        print("Salir")
+        print("Opción inválida. Por favor, elija una opción válida.")   
 
