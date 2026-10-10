@@ -7,6 +7,7 @@ while True:
     print("4. Eliminar")
     print("5. Salir")
 
+    
     op = int(input("Elija una opcion :"))
 
     if op ==1:
