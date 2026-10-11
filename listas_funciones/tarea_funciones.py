@@ -39,15 +39,14 @@ while True:
             try:
                 if len(listaTareas) == 0:
                     print("No hay tareas para modificar")
-                    break
                 else:
                     numero = int(input("Numero de tarea a modificar : "))
                     if numero <1 or numero >len(listaTareas):
-                        print("Ese numero no existe")
-                        break
+                        print("Ese numero no existe")                     
                     else:
                         nuevo = input("Nueva tarea :")
                         listaTareas[numero - 1] = nuevo
+                        break
             except:
                 print("Ingrese una opcion valida")
 
