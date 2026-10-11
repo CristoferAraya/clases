@@ -8,11 +8,15 @@ while True:
     print("4. Eliminar")
     print("5. Salir")
 
+
     try:
         op = int(input("Elija una opcion: "))
     except ValueError:
         print("Error: debes ingresar un numero.")
         continue
+
+    
+    op = int(input("Elija una opcion :"))
 
     if op == 1:
         tarea_eleccion = input("Ingrese nombre de la tarea: ")
