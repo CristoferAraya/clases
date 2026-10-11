@@ -8,15 +8,11 @@ while True:
     print("4. Eliminar")
     print("5. Salir")
 
-
     try:
         op = int(input("Elija una opcion: "))
     except ValueError:
-        print("Error: debes ingresar un numero.")
+        print("Error: ingresa un numero valido.")
         continue
-
-    
-    op = int(input("Elija una opcion :"))
 
     if op == 1:
         tarea_eleccion = input("Ingrese nombre de la tarea: ")
@@ -26,15 +22,19 @@ while True:
         else:
             tareas.append(tarea_eleccion)
             print("Tu tarea son:", tarea_eleccion)
-
+    
     elif op == 2:
-        if len(tareas) == 0:
-            print("No hay tareas agregadas.")
-        else:
-            numero = 1
-            for tarea in tareas:
-                print(numero, "-", tarea)
-                numero += 1
+            try:
+                if len(tareas) == 0:
+                    print("No hay tareas agregadas.") 
+                else:
+                    numero = 1
+                    for tarea in tareas:
+                        print(numero, "-", tarea)
+                        numero += 1
+            except :
+                print("Error: no se pudo listar las tareas.")
+               
 
     elif op == 3:
         if len(tareas) == 0:

@@ -52,7 +52,21 @@ while True:
                 print("Ingrese una opcion valida")
 
     elif op == 4:
-        print()
+        while True:
+            try:
+                if len(listaTareas) == 0:
+                    print("No hay tareas para eliminar")
+                    break
+                else:
+                    numero = int(input("Numero de tarea a eliminar : "))
+                    if numero <1 or numero >len(listaTareas):
+                        print("Ese numero no existe")
+                    else:
+                        listaTareas.pop(numero - 1)
+                        print("Tarea eliminada correctamente")
+            except:
+                print("Ingrese una opcion valida")
+      
     elif op == 5:
         print("Salir")
         break
