@@ -23,7 +23,8 @@ def agregar_producto(lista):
         return
     lista.append(producto)
     print("Producto agregado")
-    
+
+
 def listar(lista):
     if len(lista) == 0:
         print("La lista de compras está vacía.")
@@ -84,4 +85,3 @@ while True:
         break
     else:
         print("Opcion invalida. Intente de nuevo")
-
